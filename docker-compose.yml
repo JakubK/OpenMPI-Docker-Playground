@@ -4,6 +4,6 @@ services:
   openmpi:
     image: mfisherman/openmpi
     command: >
-      sh -c "cd /project && mpicc sample.c && ./a.out | xargs echo"
+      sh -c "cd /project && mpicc program.c && ./a.out | xargs echo"
     volumes:
       - ./project:/project
