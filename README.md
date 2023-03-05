@@ -6,7 +6,7 @@ It makes use of <a href="https://hub.docker.com/r/mfisherman/openmpi">mfisherman
 
 ### How to use
 
-Move your C program file to `project` directory and run
+Move your C program file named as `program.c` to `project` directory and run
 
 ```sh
 docker-compose up
@@ -14,4 +14,5 @@ docker-compose up
 
 The output of your program should be printed out making container exit. 
 
-Mentioned `project` directory already contains example `program.c` file.
+Mentioned `project` directory already contains example `program.c` file.\
+From that directory you can modify the `program.c` however you like and re-run the mentioned command to see the new results.
