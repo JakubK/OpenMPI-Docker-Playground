@@ -1,0 +1,9 @@
+version: "3.5"
+
+services:
+  openmpi:
+    image: mfisherman/openmpi
+    command: >
+      sh -c "cd /project && mpicc sample.c && ./a.out | xargs echo"
+    volumes:
+      - ./project:/project
