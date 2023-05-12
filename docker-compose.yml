@@ -4,6 +4,18 @@ services:
   openmpi:
     image: mfisherman/openmpi
     command: >
-      sh -c "cd /project && mpicc program.c && ./a.out | xargs echo"
+      tail -f /dev/null
+    volumes:
+      - ./project:/project
+  openmpi_ff:
+    image: mfisherman/openmpi
+    command: >
+      sh -c "cd /project && mpicc program.c && ./a.out 4 | xargs echo && tail -f /dev/null"
+    volumes:
+      - ./project:/project
+  openmp:
+    image: mfisherman/openmp
+    command: >
+      tail -f /dev/null
     volumes:
       - ./project:/project
